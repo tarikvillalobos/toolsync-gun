@@ -1,5 +1,9 @@
 import Tela from "../components/Tela";
 
 export default function AppPage() {
-  return <Tela titulo="App">Tela do App.</Tela>;
+  return (
+    <Tela titulo="App">
+      <iframe className="frame" src="/telas/kiosk.html" title="App" />
+    </Tela>
+  );
 }

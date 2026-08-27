@@ -15,8 +15,7 @@ export default function Tela({ titulo, children }) {
       >
         ←
       </button>
-      <h1>{titulo}</h1>
-      <p>{children}</p>
+      {children}
     </div>
   );
 }

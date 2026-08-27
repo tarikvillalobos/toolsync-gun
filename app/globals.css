@@ -67,6 +67,7 @@ a {
 
 .back {
   position: fixed;
+  z-index: 10;
   top: 24px;
   left: 24px;
   width: 42px;
@@ -79,6 +80,7 @@ a {
   font-size: 20px;
   line-height: 1;
   cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.45);
   transition: background 0.15s ease;
 }
 
@@ -86,16 +88,36 @@ a {
   background: #d0461f;
 }
 
-.tela h1 {
-  margin: 0;
-  font-size: 40px;
-  text-align: center;
-  letter-spacing: -0.02em;
+.tela {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ink);
 }
 
-.tela p {
-  margin: 12px 0 0;
-  text-align: center;
-  font-size: 16px;
-  opacity: 0.6;
+/* telas que ja vem no tamanho certo: ocupam tudo */
+
+.frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* telas fluidas: entram numa moldura centralizada e reduzida */
+
+.moldura {
+  overflow: hidden;
+  border: 1px solid rgba(242, 241, 234, 0.12);
+  border-radius: 14px;
+  background: #141414;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+}
+
+.moldura iframe {
+  display: block;
+  border: 0;
+  transform-origin: top left;
 }
