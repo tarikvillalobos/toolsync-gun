@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 // espaco livre ao redor da moldura, pro botao de voltar nao encostar nela
 const MARGEM = 140;
 
-export default function Moldura({ titulo, src, largura, altura }) {
+export default function Moldura({ titulo, src, largura, altura, semBorda }) {
   const [escala, setEscala] = useState(0);
 
   useEffect(() => {
@@ -25,7 +25,7 @@ export default function Moldura({ titulo, src, largura, altura }) {
 
   return (
     <div
-      className="moldura"
+      className={semBorda ? "moldura moldura-nua" : "moldura"}
       style={{ width: largura * escala, height: altura * escala }}
     >
       <iframe
